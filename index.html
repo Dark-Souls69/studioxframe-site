@@ -1,33 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StudioX Frame AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0d1117;
-      color: #f0f6fc;
-      text-align: center;
-      padding: 100px 20px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      background: linear-gradient(to bottom right, #0d0d1a, #1a1a33);
+      font-family: 'Roboto', sans-serif;
+      color: #eaeaea;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
     h1 {
-      font-size: 3em;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
       color: #58a6ff;
     }
+
     p {
-      font-size: 1.2em;
+      font-size: 1.2rem;
+      margin-bottom: 40px;
     }
-    a {
-      color: #8b949e;
+
+    .cta {
+      background-color: #58a6ff;
+      color: #000;
+      padding: 15px 30px;
+      font-size: 1rem;
       text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .cta:hover {
+      background-color: #1e90ff;
+    }
+
+    .footer {
+      margin-top: 80px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .socials {
+      margin-top: 30px;
+    }
+
+    .socials a {
+      color: #58a6ff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .cta {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to StudioX Frame AI</h1>
-  <p>Your virtual AI camgirl project is coming soon.</p>
-  <p>Stay tuned. Visit us again later 👀</p>
+  <h1>StudioX Frame AI</h1>
+  <p>Your virtual AI camgirl is getting ready to launch.</p>
+  <a class="cta" href="#">Notify Me on Launch</a>
+
+  <div class="socials">
+    <p>Follow us:</p>
+    <a href="#">Twitter</a>
+    <a href="#">Instagram</a>
+    <a href="#">OnlyFans</a>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 StudioX Frame. All rights reserved.</p>
+  </div>
 </body>
 </html>
