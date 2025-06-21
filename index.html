@@ -1,98 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StudioX Frame AI</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --bg-color: #0d1117;
+      --text-color: #c9d1d9;
+      --accent: #58a6ff;
+      --card-bg: #161b22;
+      --border-color: #30363d;
     }
 
     body {
-      background: linear-gradient(to bottom right, #0d0d1a, #1a1a33);
-      font-family: 'Roboto', sans-serif;
-      color: #eaeaea;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    header {
+      width: 100%;
+      padding: 1em 0;
       text-align: center;
-      padding: 60px 20px;
+      border-bottom: 1px solid var(--border-color);
     }
 
-    h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #58a6ff;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: var(--accent);
     }
 
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 40px;
+    nav {
+      margin-top: 0.5em;
     }
 
-    .cta {
-      background-color: #58a6ff;
-      color: #000;
-      padding: 15px 30px;
-      font-size: 1rem;
+    nav a {
+      margin: 0 10px;
+      color: var(--text-color);
       text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      margin: 2em auto;
+      text-align: center;
+    }
+
+    .teaser {
+      background-color: var(--card-bg);
+      padding: 2em;
+      border-radius: 12px;
+      margin-bottom: 2em;
+    }
+
+    .teaser img {
+      width: 180px;
+      height: 180px;
+      border-radius: 100px;
+      background-color: #222;
+      margin-bottom: 1em;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    input[type=email] {
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background-color: var(--accent);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .chat-preview {
+      margin-top: 2em;
+      background-color: var(--card-bg);
+      border-left: 4px solid var(--accent);
+      padding: 1em;
+      text-align: left;
       border-radius: 8px;
-      transition: background-color 0.3s;
+      font-style: italic;
     }
 
-    .cta:hover {
-      background-color: #1e90ff;
-    }
-
-    .footer {
-      margin-top: 80px;
-      font-size: 0.9rem;
-      color: #888;
-    }
-
-    .socials {
-      margin-top: 30px;
-    }
-
-    .socials a {
-      color: #58a6ff;
-      margin: 0 12px;
-      text-decoration: none;
-      font-size: 1.2rem;
+    footer {
+      padding: 1em;
+      font-size: 0.9em;
+      color: #777;
+      text-align: center;
+      border-top: 1px solid var(--border-color);
+      margin-top: 2em;
     }
 
     @media (max-width: 600px) {
-      h1 {
+      header h1 {
         font-size: 2rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .cta {
-        padding: 12px 24px;
-        font-size: 0.9rem;
       }
     }
   </style>
 </head>
 <body>
-  <h1>StudioX Frame AI</h1>
-  <p>Your virtual AI camgirl is getting ready to launch.</p>
-  <a class="cta" href="#">Notify Me on Launch</a>
+  <header>
+    <h1>StudioX Frame AI</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#signup">Join</a>
+      <a href="#chat">Chat</a>
+    </nav>
+  </header>
 
-  <div class="socials">
-    <p>Follow us:</p>
-    <a href="#">Twitter</a>
-    <a href="#">Instagram</a>
-    <a href="#">OnlyFans</a>
+  <div class="container">
+    <section class="teaser" id="about">
+      <img src="https://via.placeholder.com/180x180?text=Avatar" alt="Avatar Placeholder">
+      <p><strong>Your AI camgirl is almost ready!</strong><br>
+      We’re crafting a fully virtual interactive experience for you.<br>
+      Be among the first to know when we launch. 🚀</p>
+    </section>
+
+    <section id="signup">
+      <form>
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Join the Early Access List</button>
+      </form>
+    </section>
+
+    <section id="chat" class="chat-preview">
+      <strong>Preview Conversation:</strong><br>
+      <em>StudioX: Hey babe 😘 Ready for some private attention? Just say the word.</em>
+    </section>
   </div>
 
-  <div class="footer">
-    <p>&copy; 2025 StudioX Frame. All rights reserved.</p>
-  </div>
+  <footer>
+    &copy; 2025 StudioX Frame. All rights reserved.
+  </footer>
 </body>
 </html>
